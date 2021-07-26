@@ -1,0 +1,60 @@
+//// detailsFilter-content  -----------
+.filter-content{
+  height: 40px;
+  display: flex;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  .filter-by{
+    text-align: left;
+    line-height: 40px;
+    margin-right: 20px;
+  }
+
+
+.filter-box{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 12px;
+    &.active{
+      background: #FFDB11;
+    }
+    &>div:first-child  {
+       width: 40px;
+       padding: 12px;
+       position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        height: 30px;
+        width: 1px;
+        background: #EBEBEB;
+      }
+    }
+    &>div:last-child {
+      width: 100%;
+      margin-left: 10px;
+
+     }
+  }
+  .clear-filter{
+    cursor: pointer;
+    line-height: 40px;
+    &:hover{
+      text-decoration: underline;
+    }
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
